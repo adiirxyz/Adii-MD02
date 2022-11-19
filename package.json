@@ -12,19 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adiixyz/Adii-MD02.git"
+    "url": "git+https://github.com/Adii𝘳xyz/Adii-MD02.git"
   },
   "bugs": {
-    "url": "https://github.com/Adiixyz/Adii-MD02/issues"
+    "url": "https://github.com/Adii𝘳xyz/Adii-MD02/issues"
   },
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys-md": "github:adiwajshing/baileys#multi-device",
+    "@adiwajshing/baileys-md": "github:adiwajshing/baileys",
     "acrcloud": "^1.4.0",
     "axios": "^0.25.0",
     "file-type": "^17.0.0",
     "form-data": "^4.0.0"
   },
   "author": "Adiixyz",
-  "homepage": "https://github.com/Adiixyz/Adii-MD02"
+  "homepage": "https://github.com/Adii𝘳xyz/Adii-MD02"
 }
