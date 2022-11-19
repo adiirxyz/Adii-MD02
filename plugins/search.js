@@ -1,7 +1,7 @@
 (async () => {
 	switch (true) {
 		case /^yts(earch)?$/i.test(command): {
-			if (!q) return reply(`Example:${prefix + command} phonk music`)
+			if (!q) return reply(`𝘦𝘹𝘢𝘮𝘱𝘭𝘦:${prefix + command} phonk music`)
 			await reply(mess.wait)
 			axios.get(API('hardianto', '/yt/search', { query: q }, 'apikey')).then(async ({ data }) => {
 				let res = data.result.filter(v => v.type == 'video')
@@ -11,7 +11,7 @@
 			break
 		}
 		case /^google$/i.test(command): {
-			if (!q) return reply(`Example:${prefix + command} apa itu bot`)
+			if (!q) return reply(`𝘦𝘹𝘢𝘮𝘱𝘭𝘦:${prefix + command} apa itu bot`)
 			await reply(mess.wait)
 			axios.get(API('zacros', '/search/google', { query: q })).then(async ({ data }) => {
 				let teks = data.result.map(v => `*${v.title}*\n_${v.link}_\n_${v.snippet}_`).join('\n\n')
