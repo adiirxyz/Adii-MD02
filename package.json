@@ -19,7 +19,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys-md": "github:adiwajshing/baileys",
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "acrcloud": "^1.4.0",
     "axios": "^0.25.0",
     "file-type": "^17.0.0",
