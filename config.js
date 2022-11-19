@@ -5,7 +5,7 @@ global.mode = 'publik' //kalo mau self ubah dari publik ke self
 global.packName = 'Adii-MD'
 global.authorName = 'Beta'
 // global.thumb = fs.readFileSync('./thumb.jpeg')
-global.ownerNumber = ['+60 19-978 2326']
+global.ownerNumber = ['+60199782326']
 global.thumbnailUrl = ['https://telegra.ph/file/69d52042b39386c222151.jpg', 'https://telegra.ph/file/7079e0b324406d3d7543c.jpg', 'https://telegra.ph/file/3a3edf8916e3239522a34.jpg']
 // global.db = JSON.parse(fs.readFileSync('./db.json'))
 
@@ -23,7 +23,7 @@ global.APIs = {
 global.APIKeys = {
 	'https://api.zeks.me/api': 'Nyarlathotep',
 	'https://hardianto.xyz/api': 'hardianto',
-	'https://melcanz.com: 'GVQjlc7H'
+	'https://melcanz.com': 'GVQjlc7H'
 }
 
 let file = require.resolve(__filename)
