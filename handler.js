@@ -1,5 +1,5 @@
 'use strict'
-const Baileys = require('@adiwajshing/baileys-md')
+const Baileys = require('@adiwajshing/baileys')
 const cp = require('child_process')
 const axios = require('axios')
 const path = require('path')
