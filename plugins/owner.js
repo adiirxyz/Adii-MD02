@@ -14,7 +14,7 @@
 		}
 		case /^[$] /.test(body): {
 			if (!isOwner) return
-			await reply('Executing...')
+			await reply('𝘌𝘹𝘦𝘤𝘶𝘵𝘪𝘯𝘨...')
 			cp.exec(q, (stderr, stdout) => {
 				if (stderr) reply(stderr)
 				if (stdout) reply(stdout)
@@ -24,13 +24,13 @@
 		case /^setprefix$/i.test(command): {
 			if (!isOwner) return
 			global.prefix = q
-			reply(`Success change prefix to ${q}`)
+			reply(`𝘊𝘩𝘢𝘯𝘨𝘦𝘥 𝘵𝘰 𝘱𝘳𝘦𝘧𝘪𝘹 ${q}`)
 			break
 		}
 		case /^(self|publi(k|c))$/i.test(command): {
 			if (!isOwner) return
-			global.mode = /self/i.test(body) ? 'self' : 'public'
-			reply(`Success change mode to ${mode}`)
+			global.mode = /self/i.test(body) ? '𝘚𝘦𝘭𝘧' : '𝘗𝘶𝘣𝘭𝘪𝘤'
+			reply(`𝘊𝘩𝘢𝘯𝘨𝘦𝘥 𝘮𝘰𝘥𝘦 𝘵𝘰 ${mode}`)
 			break
 		}
 		case /^set(ppbot|botpp)$/i.test(command): {
@@ -48,7 +48,7 @@
 			if (!isOwner) return reply(mess.owner)
 			let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 			let [_, code] = q.match(linkRegex) || []
-			if (!code) return reply('Invalid url')
+			if (!code) return reply('𝘪𝘯𝘷𝘢𝘭𝘪𝘥 url')
 				await conn.groupAcceptInvite(code).then(async (gid) => {
 				let groupMeta = await conn.groupMetadata(gid)
 				reply(`Success join group ${groupMeta.subject}`)
@@ -57,7 +57,7 @@
 		}
 		case /^restart$/i.test(command): {
 			if (!isOwner) return
-			await reply('Restarting...')
+			await reply('𝘙𝘦𝘴𝘵𝘢𝘳𝘵𝘪𝘯𝘨...')
 			process.send('reset')
 			break
 		}
