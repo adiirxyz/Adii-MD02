@@ -3,17 +3,17 @@ require('./config.js')
 const P = require('pino')
 const handler = require('./handler.js')
 const simple = require('./lib/simple.js')
-const { useSingleFileAuthState } = require('@adiwajshing/baileys-md')
+const { useMultiFileAuthState } = require('@adiwajshing/baileys')
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 
 let authFile = './adii.json'
-const { state, saveState } = useSingleFileAuthState(authFile)
+const { state, saveState } = useMultiFileAuthState(authFile)
 
 async function start() {
 	global.conn = simple.makeWASocket({
 		logger: P({ level: 'fatal' }),
-		browser: ['AdiiMD'],
+		browser: ['RenzMd'],
 		printQRInTerminal: true,
 		auth: state
 	})
