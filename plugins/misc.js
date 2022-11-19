@@ -7,7 +7,7 @@
 				// await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: menu(prefix, clockString), footer: `Hai @${sender.split('@')[0]} ${decodeURI('%F0%9F%91%8B')}`, mentions: [sender], buttons })
 			// } else {
 				let templateButtons = [{ urlButton: { displayText: 'Source Code', url : pkg.homepage }}, { quickReplyButton: { displayText: 'All-Menu', id: prefix + 'allmenu' }}, { quickReplyButton: { displayText: 'Owner', id: prefix + 'owner' }}, { quickReplyButton: { displayText: 'TOS', id: prefix + 'tos' }}]
-				await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: menu(prefix, clockString), footer: `Hai ${pushname} ${decodeURI('%F0%9F%91%8B')}`, templateButtons })
+				await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: menu(prefix, clockString), footer: `𝘏𝘦𝘺 ${pushname} ${decodeURI('%F0%9F%91%8B')}`, templateButtons })
 			// }
 			break
 		}
@@ -18,7 +18,7 @@
 				// await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: menu(prefix, clockString), footer: `Hai @${sender.split('@')[0]} ${decodeURI('%F0%9F%91%8B')}`, mentions: [sender], buttons })
 			// } else {
 				let buttonMenu = [{ urlButton: { displayText: 'Source Code', url : pkg.homepage }}, { quickReplyButton: { displayText: 'Ping', id: prefix + 'ping' }}, { quickReplyButton: { displayText: 'Owner', id: prefix + 'owner' }}, { quickReplyButton: { displayText: 'TOS', id: prefix + 'tos' }}]
-				await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: allmenu(prefix), footer: `Hai ${pushname} ${decodeURI('%F0%9F%91%8B')}`, buttonMenu })
+				await conn.sendMessage(from, { location: { jpegThumbnail: data }, caption: allmenu(prefix), footer: `𝘏𝘦𝘺 ${pushname} ${decodeURI('%F0%9F%91%8B')}`, buttonMenu })
 			// }
 			break
 		}
@@ -34,11 +34,11 @@
 			if (/viewOnce/.test(typeQuoted)) {
 				let tipe = quoted[typeQuoted].message.imageMessage ? quoted[typeQuoted].message.imageMessage : quoted[typeQuoted].message.videoMessage
 				conn.downloadM(tipe, quoted[typeQuoted].message.imageMessage ? 'image' : 'video').then(v => conn.sendFile(from, v, '', quoted[typeQuoted].message.imageMessage ? quoted[typeQuoted].message.imageMessage.caption : quoted[typeQuoted].message.videoMessage.caption, m))
-			} else reply('Reply viewOnceMessage!')
+			} else reply('𝘳𝘦𝘱𝘭𝘺 𝘳𝘷𝘰 𝘮𝘦𝘴𝘴𝘢𝘨𝘦!')
 			break
 		}
 		case /^ss(web)?f?$/i.test(command): {
-			if (!args[0]) return reply('Urlnya?')
+			if (!args[0]) return reply('𝘶𝘳𝘭?')
 			let url = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
 			let full = /f$/i.test(command) ? API('hadi', '/ssweb2', { url }) : API('popcat', '/screenshot', { url })
 			await reply(mess.wait)
@@ -57,12 +57,11 @@
 		case /^owner$/i.test(command): {
 			let owner = ownerNumber[1].replace(/\D/g, '')
 			let contacts = Baileys.generateWAMessageFromContent(from, Baileys.proto.Message.fromObject({ contactsArrayMessage: { displayName: 'Owner', contacts: [{ vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Adii\nTEL;waid=${owner}:${owner}\nEND:VCARD` }] }}), { userJid: conn.user.jid, quoted: m })
-			await conn.relayMessage(from, contacts.message, { messageId: contacts.key.id })
-			// conn.sendContact(from, ownerNumber[1], 'Ripp', m)
+			conn.sendContact(from, '60199782326', '𝘙𝘦𝘯𝘻', m)
 			break
 		}
 		case /^cekprefix$/i.test(body): {
-			reply('Prefix: ' + prefix)
+			reply('𝘗𝘳𝘦𝘧𝘪𝘹: ' + prefix)
 			break
 		}
 		case /^del(ete)?$/i.test(command): {
@@ -78,12 +77,12 @@
 			let neww = +new Date
 			let speed = functions.parseMs(neww - old)
                         let spoon = `${speed.seconds}.${speed.milliseconds}`
-			reply(`Merespon dalam ${spoon} detik`)
+			reply(`𝘙𝘦𝘴𝘱𝘰𝘯𝘥 𝘪𝘯 ${spoon} 𝘴𝘦𝘤𝘰𝘯𝘥𝘴`)
 			break
 		}
 		case /^(list(grup|group|gc)|grouplist)$/i.test(command): {
 			let grup = Object.values(await conn.groupFetchAllParticipating()).map(v => `${v.subject}\n${v.id}`).join`\n\n`
-			reply('List Groups:\n\n' + grup)
+			reply('𝘓𝘪𝘴𝘵 𝘨𝘳𝘰𝘶𝘱𝘴:\n\n' + grup)
 			break
 		}
 	}
